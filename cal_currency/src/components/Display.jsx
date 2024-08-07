@@ -31,7 +31,7 @@ function Display() {
           {result}
         </Text>
       </Box>
-      <Numbers data={counts} />
+      <Numbers data={counts} handlerClick={setCount} />
     </Box>
   );
 }
