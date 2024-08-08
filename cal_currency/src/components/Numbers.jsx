@@ -3,28 +3,28 @@ import { Button, Box } from '@chakra-ui/react';
 
 function Numbers({ data, handlerClick }) {
 
-  const nums = Array.from(
+  const keys = Array.from(
     Array(10)
       .keys()
-      .map((number) => (
+      .map((key) => (
         <Button
           onClick={(e) =>
             data === '0'
               ? handlerClick(e.target.textContent)
               : handlerClick(data + e.target.textContent)
           }
-          key={number}
+          key={key}
           w="40px"
           h="40px"
           margin="4px"
         >
-          {number}
+          {key}
         </Button>
       ))
   );
   return (
     <Box display="flex" flexWrap="wrap" w="95%">
-      {nums}
+      {keys}
     </Box>
   );
 }

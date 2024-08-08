@@ -5,8 +5,7 @@ import Display from './Display.jsx';
 // import { useState } from 'react';
 
 function App() {
-  // const [counts, setCount] = useState('efsefse');
-  // const [result, setResult] = useState('');
+
   return (
     <div className="App">
       <Box
@@ -17,7 +16,6 @@ function App() {
         h="100vh"
       >
         <Display />
-        {/* <Numbers /> */}
       </Box>
     </div>
   );
