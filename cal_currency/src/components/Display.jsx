@@ -1,5 +1,5 @@
 import { Box, Text, Button } from '@chakra-ui/react';
-import Numbers from './Numbers.jsx';
+import Keys from './Keys.jsx';
 import CountButton from './CountButton.jsx';
 import { useState } from 'react';
 
@@ -34,20 +34,26 @@ function Display() {
         >
           {counts}
         </Text>
-        <Text
-          w="fit-content"
-          h="38px"
-          textColor="tomato"
-        >
+        <Text w="fit-content" h="38px" textColor="tomato">
           {result}
         </Text>
       </Box>
-      <Numbers data={counts} handlerClick={setCount} />
-      <Box display="flex" gap="9px">
+      <Keys data={counts} handlerClick={setCount} />
+      <Box display="flex" flexWrap="wrap" gap="9px">
         <CountButton data={counts} expression="+" handler={applyExpresion} />
         <CountButton data={counts} expression="-" handler={applyExpresion} />
         <CountButton data={counts} expression="*" handler={applyExpresion} />
         <CountButton data={counts} expression="/" handler={applyExpresion} />
+        <Button
+          bg="tomato"
+          m="4px"
+          w="100%"
+          onClick={() => {
+            setResult(eval(counts));
+          }}
+        >
+          =
+        </Button>
       </Box>
     </Box>
   );

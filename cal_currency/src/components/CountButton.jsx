@@ -8,7 +8,11 @@ function CountButton({ data, expression, handler }) {
       return handler(data + expression);
     }
   }
-  return <Button onClick={() => checkExpresionType()}>{expression}</Button>;
+  return (
+    <Button bg="blue" onClick={() => checkExpresionType()}>
+      {expression}
+    </Button>
+  );
 }
 
 export default CountButton;

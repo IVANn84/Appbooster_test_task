@@ -1,8 +1,7 @@
 /* eslint-disable */
 import { Button, Box } from '@chakra-ui/react';
 
-function Numbers({ data, handlerClick }) {
-
+function Keys({ data, handlerClick }) {
   const keys = Array.from(
     Array(10)
       .keys()
@@ -29,4 +28,4 @@ function Numbers({ data, handlerClick }) {
   );
 }
 
-export default Numbers;
+export default Keys;
